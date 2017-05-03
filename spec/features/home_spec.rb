@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Exchange Currency Process", :type => :feature do
-  it "exchange value" do
+  xit "exchange value" do
     visit '/'
     within("#exchange_form") do
       select('EUR', from: 'currency')

@@ -1,6 +1,5 @@
 $(document).ready ->
-  $('form').submit ->
-    event.preventDefault();
+  $('form :input').on 'change keyup', ->
     if $('form').attr('action') == '/exchange'
       $.ajax '/exchange',
         type: 'POST'
@@ -15,3 +14,9 @@ $(document).ready ->
         success: (data, textStatus, jqXHR) ->
           $('#result').val(data.value)
           return false;
+
+  $('#btn-exchange-currencies').click ->
+    currency_val = $('#currency').val()
+    currency_destination_val = $('#currency_destination').val()
+    $('#currency').val(currency_destination_val)
+    $('#currency_destination').val(currency_val).change()
