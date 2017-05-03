@@ -1,24 +1,42 @@
-# README
+# One Bit Code Exchange
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app was developed in the __One Bit Code Bootcamp 2__ and it's goal is to make the exchange between two currencies using the [Fixer API](http://fixer.io/).
 
-Things you may want to cover:
+## Demo
+[This link](https://onebitcodeexchange.herokuapp.com/) shows my version off the app
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+This instructions will give you a copy of the project on your local machine for development and testing.
 
-* Configuration
+### Installing
 
-* Database creation
+#### Using Docker
+```
+git clone https://github.com/luiswitz/onebitcode_exchange.git
+cd onebitcode_exchange
+docker-compose build
+docker-compose up
+```
 
-* Database initialization
+#### Localhost
+```
+git clone https://github.com/luiswitz/onebitcode_exchange.git
+cd onebitcode_exchange
+bundle install
+rails s
+```
 
-* How to run the test suite
+### Testing
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Using Docker
+In the project folder
+```
+docker-compose run --rm website rspec
+```
 
-* Deployment instructions
-
-* ...
+#### Localhost
+In the project folder
+```
+rspec
+```
